@@ -21,3 +21,4 @@ ENV SPARK_HOME=/spark \
 COPY start-master.sh start-worker.sh /
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY libs.zip nltk_data.zip /tmp/
