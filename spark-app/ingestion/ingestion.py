@@ -70,6 +70,7 @@ if __name__ == '__main__':
     #stream.filter(track = ['love', 'hate'], languages = ['en'])
     for config in stream_config:
         # Create stream and bind the listener to it
+        print(f'Connect to {kafka_host}')
         stream = tweepy.Stream(auth, listener=TweeterStreamListener(
             api, kafka_host, stream_config=config))
         print(f'Track by keywords: {config.get("twitter_keywords")}')
